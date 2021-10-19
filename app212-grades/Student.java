@@ -40,7 +40,7 @@ public class Student
      */
     public void awardMark(String moduleCode, int value)
     {
-
+       
     }
     
     /**
@@ -95,7 +95,7 @@ public class Student
     
     private void printModules()
     {
-
+        
     }
     
     public void printTranscript()
