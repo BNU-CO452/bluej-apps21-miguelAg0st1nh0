@@ -1,0 +1,88 @@
+Course computing = new Course("BT1CTG1", "BSc Computing");
+computing.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CTG1: BSc Computing
+======================================
+This Course has no modules assigned to it
+Student student1 = new Student("Miguel Agostinho", 22020797, 26);
+student1.print();
+ Student ID: 22020797 Name: Miguel Agostinho Age: 26
+student1.enrol(computing);
+student1.printCourse();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CTG1: BSc Computing
+======================================
+This Course has no modules assigned to it
+student1.print();
+ Student ID: 22020797 Name: Miguel Agostinho Age: 26
+computing.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CTG1: BSc Computing
+======================================
+This Course has no modules assigned to it
+computing.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CTG1: BSc Computing
+======================================
+This Course has no modules assigned to it
+student1.printCourse();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CTG1: BSc Computing
+======================================
+This Course has no modules assigned to it
+student1.printCourse();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CTG1: BSc Computing
+======================================
+This Course has no modules assigned to it
+computing.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CTG1: BSc Computing
+======================================
+This Course has no modules assigned to it
+Module CO452 = new Module("C0452", "Programming Concepts");
+CO452.printModuleInfo();
+Name: Programming Concepts
+Code: C0452
+Credits: 0
+CO452.setCredits(15);
+CO452.printModuleInfo();
+Name: Programming Concepts
+Code: C0452
+Credits: 15
+CO452.printModuleInfo();
+Name: Programming Concepts
+Code: C0452
+Credits: 15
+computing.addModule(CO452);
+computing.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CTG1: BSc Computing
+======================================
+Module Name: Programming Concepts
+Module Code: C0452
+Module Credit: 15

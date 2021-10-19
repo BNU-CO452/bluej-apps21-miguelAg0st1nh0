@@ -4,8 +4,8 @@
  * concerning the course the student is currently enrolled on
  * 
  * @author Michael Kölling and David Barnes
- * @modified by Derek Peacock and Nicholas Day
- * @version 2021:08:15
+ * @modified by Miguel Agostinho
+ * @version 07/10/2021
  */
 public class Student
 {
@@ -16,13 +16,16 @@ public class Student
     // The course the student is enrolled on
     private Course course;
     
+    private int age;
+    
     /**
      * Create a new student with a given name and ID number.
      */
-    public Student(String name, int id)
+    public Student(String name, int id, int age)
     {
         this.name = name;
         this.id = id;
+        this.age = age;
     }
 
     /**
@@ -32,7 +35,16 @@ public class Student
     {
         return name;
     }
-
+    
+    /**
+     * Return Student's Age.
+     */
+    
+    public int getAge()
+    {
+        return age;
+    }
+    
      /**
      * Return the student ID of this student.
      */
@@ -51,7 +63,7 @@ public class Student
      */
     public void print()
     {
-        System.out.println(" Student ID: " + id + " Name: " + name);
+        System.out.println(" Student ID: " + id + " Name: " + name + " Age: " + age);
     }
     
     public void printCourse()
