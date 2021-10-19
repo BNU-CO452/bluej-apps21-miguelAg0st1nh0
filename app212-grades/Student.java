@@ -4,8 +4,8 @@ import java.util.*;
  * It holds the student details relevant in our context.
  * 
  * @author Michael Kölling and David Barnes
- * Modified by Derek Peacock & Nicholas Day
- * @version 2021-08-18
+ * Modified by Miguel Agostinho
+ * @version 19/10/2021
  */
 public class Student
 {
@@ -17,15 +17,6 @@ public class Student
     private Course course;
     // The marks awarded for the modules on the course
     private ArrayList<ModuleMark> marks;
-    
-    /**
-     * This constructor creates a new student with a
-     * fixed name and id. 
-     */
-    public Student()
-    {
-        this("Derek", 12345678);
-    }
     
     /**
      * Create a new student with a given name and ID number.
@@ -49,7 +40,7 @@ public class Student
      */
     public void awardMark(String moduleCode, int value)
     {
-
+       
     }
     
     /**
@@ -104,7 +95,7 @@ public class Student
     
     private void printModules()
     {
-
+        
     }
     
     public void printTranscript()
