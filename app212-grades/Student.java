@@ -21,6 +21,7 @@ public class Student
     /**
      * Create a new student with a given name and ID number.
      */
+    
     public Student(String name, int id)
     {
         this.name = name;
@@ -32,15 +33,6 @@ public class Student
     public void addMark(ModuleMark mark)
     {
         marks.add(mark);
-    }
-    
-    /**
-     * Find the module by the moduleCode and
-     * set its mark to the value
-     */
-    public void awardMark(String moduleCode, int value)
-    {
-       
     }
     
     /**
@@ -58,7 +50,16 @@ public class Student
      */
     public void awardTestMarks()
     {
-        
+        int value = 80;
+        for(Module module: course.modules)
+        {
+            ModuleMark mark = new ModuleMark(module);
+            
+            mark.setMark(value); 
+            value = value - 10;
+            marks.add(mark);
+            
+        }
     }
     
     /**
@@ -92,10 +93,17 @@ public class Student
         this.print();
         course.print();
     }
-    
-    private void printModules()
+    /**
+     * Loop trough each mark to print mark and grade.
+     */
+    public void printModules()
     {
-        
+        for(ModuleMark mark: marks)
+        {
+            mark.print();
+            System.out.println("      " + course.convertToGrade(mark.getValue()));
+            
+        }
     }
     
     public void printTranscript()
@@ -105,7 +113,7 @@ public class Student
         System.out.println("        by student name");
         System.out.println(" ------------------------------------");
         
-        printCourse();
+        printCourse(); 
         
         System.out.println();
         System.out.println();
@@ -113,18 +121,18 @@ public class Student
         System.out.println(" Code \t Module \t\tCredit\t Mark \t Grade");
         System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
         
-       
+        printModules();
+        
         Grades finalGrade = course.calculateGrade(marks);
-        
-        System.out.println();
-        System.out.println();
-        
+ 
         if(finalGrade == Grades.NS)
         {
+            System.out.println();
             System.out.println(" No Final Course Grade Yet!");
         }
         else
         {
+            System.out.println();
             System.out.println(" Final Course Grade = " + finalGrade);
         }
     }

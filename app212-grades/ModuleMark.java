@@ -2,8 +2,8 @@
 /**
  * Write a description of class ModuleMark here.
  *
- * @author Derek Peacock and Nicholas Day
- * @version 2021-08-18
+ * @author Miguel Agostinho
+ * @version 27/10/2021
  */
 public class ModuleMark
 {
@@ -57,6 +57,6 @@ public class ModuleMark
     public void print()
     {
         module.print();
-        System.out.print("\t  " + getCredit() + "\t" + mark);
+        System.out.print("\t  " + getCredit() + "\t  " + mark);
     }
 }

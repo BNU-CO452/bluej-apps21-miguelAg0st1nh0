@@ -3,8 +3,8 @@
  * credits that students achieve when they
  * pass the module with a mark of 40+
  *
- * @author Derek Peacock and Nicholas Day
- * @version 1.0 17/07/2021
+ * @author Miguel Agostinho
+ * @version 27/10/2021
  */
 public class Module
 {
@@ -44,7 +44,7 @@ public class Module
     public void print()
     {
         System.out.println();
-        System.out.print(" " + code + ": " + "\t" + title);
+        System.out.print(code + ": " + "\t" + title);
     }
     
     /**
@@ -53,6 +53,6 @@ public class Module
      */
     public void printCredit()
     {
-        System.out.print("\t  " + CREDIT + " credits");
+        System.out.print("\t  \t" + CREDIT + " \t credits");
     }
 }
