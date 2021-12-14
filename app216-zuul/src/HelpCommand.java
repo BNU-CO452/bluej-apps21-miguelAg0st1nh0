@@ -19,16 +19,15 @@ public class HelpCommand extends ZuulCommand
      */
     public void execute()
     {
-        System.out.println(" You are lost. You are alone. You wander");
-        System.out.println(" around at the university.");        
-        System.out.println();
+        System.out.println(" You are lost. You are alone. You feel the void of the solar system!");
+        System.out.println(" You are not sure where to go but legends say to follow the light and you'll find the way!");
+        System.out.println("======================================================================");
         System.out.println(" Your command words are:");
         System.out.println();
         
         for(CommandWords command : CommandWords.values())
         {
-            System.out.println(" " + command.word + 
-                               "\t  : " + command.description);                        
+            System.out.println("" + command.word + "\t: " + command.description);
         }   
         System.out.println();
         System.out.println(" e.g. go west, take gold");

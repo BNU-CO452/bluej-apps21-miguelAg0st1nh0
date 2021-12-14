@@ -13,18 +13,22 @@ import java.util.Iterator;
  * location stores a reference to the neighboring locations.
  * 
  * @author  Michael Kölling and David J. Barnes
- * Modified by Derek Peacock & Nicholas Day
- * @version 2016.02.29
+ * Modified by Miguel Agostinho
+ * @version 07/12/2021
  */
 
 public class Location 
 {
+
+    private Items itemInRoom;
     private String description;
-    private HashMap<String, Location> exits;        // stores exits of this room.
+    // This stores exits of this room.
+    private HashMap<String, Location> exits;
 
     /**
-     * Create a location described "description". Initially, it has
-     * no exits. "description" is something like "a kitchen" or
+     * Create a location described by "description".
+     * Initially, a location has no exits.
+     * "description" is something like "a kitchen" or
      * "an open court yard".
      */
     public Location(String description) 
@@ -55,28 +59,32 @@ public class Location
     /**
      * Return a description of the room in the form:
      *     You are in the kitchen.
-     *     Exits: north west
+     *     Exits: north-west
      * @return A long description of this room
      */
     public String getLongDescription()
     {
-        return " You are " + description + ".\n" + getExitString();
+        return " You are at " + description + ".\n" + getExitString();
     }
 
+
     /**
-     * Return a string describing the locations's exits, 
-     * for example "Exits: north west".
+     * Return a string listing all the exits locations,
+     * for example "Exits: north-west".
      */
     private String getExitString()
     {
-        String returnString = " Exits:";
+        String exitNames = " Exits: ";
         Set<String> keys = exits.keySet();
         
         for(String exit : keys) 
         {
-            returnString += " " + exit;
+            if(exitNames.length() > 8)
+                exitNames += ", " + exit;
+            else
+                exitNames += exit;
         }
-        return returnString;
+        return exitNames;
     }
 
     /**

@@ -18,6 +18,7 @@ import java.util.ArrayList;
  */
 public class CommandReader 
 {
+    private Location location;
     private Game game;
     private Scanner reader; // source of command input
 
@@ -81,6 +82,30 @@ public class CommandReader
         {
             return true;  // game over
         }
+        else if(commandWord.equals(CommandWords.MAP.word))
+        {
+            //Prints map every time 'map' is read in scanner;
+            System.out.println("=====================-MAP-=================");
+            System.out.println("=                    =======              =");
+            System.out.println("=                    =VENUS=              =");
+            System.out.println("=      =========        |       ========  =");
+            System.out.println("=      =MERCURY=    --=SUN=--   =EARTH==  =");
+            System.out.println("=      =========        |       ========  =");
+            System.out.println("=                     =MARS=              =");
+            System.out.println("=      =========        |      ========   =");
+            System.out.println("=      =SATURN=   --=JUPITER=-- =URANUS=  =");
+            System.out.println("=      =========        |      ========   =");
+            System.out.println("=                   =NEPTUNE=             =");
+            System.out.println("=                   =========             =");
+            System.out.println("=====================-MAP-=================");
+            
+
+        }
+        else if(commandWord.equals((CommandWords.ITEMS.word)))
+        {
+            System.out.println("Print Items in room");
+        }
+
 
         // Return false means the game is not over
         return false;

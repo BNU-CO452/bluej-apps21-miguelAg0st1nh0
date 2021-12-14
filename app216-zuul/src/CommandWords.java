@@ -8,11 +8,15 @@
  */
 public enum CommandWords
 {
+    //TODO add new command words
+    MAP("map", "Display map!"),
+    ITEMS ("item", ""),
     GO   ("go","Exit location in <direction>"),
-    TAKE ("take", "Take <item> from location"),
+    TAKE ("take", "Take <it+em> from location"),
     HELP ("help", "List all available commands"),
     QUIT ("quit", "End the game");
-    
+
+
     public final String word;
     public final String description;
     
