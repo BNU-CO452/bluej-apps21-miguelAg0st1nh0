@@ -1,15 +1,30 @@
+
+
+
 public class Items
 {
-    private String chest, sword;
-    public Items()
+    String name;
+    String description;
+    int id;
+    public Items(String name, String description, int id)
     {
-        createItems();
+        this.name = name;
+        this.description = description;
+        this.id = id;
+    }
+
+    private void getShortDescription()
+    {
+        System.out.println(name);
+    }
+
+    private void getLongDescription()
+    {
+        System.out.println(name + description + id);
     }
 
 
-    public void createItems()
-    {
-        chest = "You have found a chest. Will you take it?";
-        sword = "You found a sword. Seems sharp enough to do some damage!";
-    }
+
+
+
 }

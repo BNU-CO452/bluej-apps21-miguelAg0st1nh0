@@ -5,37 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c107667b-e5e3-4b88-afa3-20da6e4690e1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../app214-stockIntelliJ/src/com/company/InputReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app214-stockIntelliJ/src/com/company/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app214-stockIntelliJ/src/com/company/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app214-stockIntelliJ/src/com/company/StockApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app214-stockIntelliJ/src/com/company/StockDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app214-stockIntelliJ/src/com/company/StockList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IJ-App06-Zuul.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Items.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app213-products/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../app213-products/package.bluej" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandWords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Map.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TakeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TakeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ZuulCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ZuulCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommandReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Location.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

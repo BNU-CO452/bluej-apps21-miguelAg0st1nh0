@@ -24,6 +24,7 @@ public class Location
     private String description;
     // This stores exits of this room.
     private HashMap<String, Location> exits;
+    private HashMap<String, Items> items;
 
     /**
      * Create a location described by "description".
@@ -33,8 +34,10 @@ public class Location
      */
     public Location(String description) 
     {
+
         this.description = description;
         exits = new HashMap<>();
+        items = new HashMap<>();
     }
 
     /**
@@ -62,6 +65,7 @@ public class Location
      *     Exits: north-west
      * @return A long description of this room
      */
+    //TODO print here the items that exist in the planet;
     public String getLongDescription()
     {
         return " You are at " + description + ".\n" + getExitString();

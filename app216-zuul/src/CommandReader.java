@@ -98,7 +98,7 @@ public class CommandReader
             System.out.println("=                   =NEPTUNE=             =");
             System.out.println("=                   =========             =");
             System.out.println("=====================-MAP-=================");
-            
+
 
         }
         else if(commandWord.equals((CommandWords.ITEMS.word)))
