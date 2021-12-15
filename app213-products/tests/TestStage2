@@ -1,0 +1,42 @@
+stockLis1.print();
+
+ Miguel's GameStop Stock List
+ ====================
+
+ ID 101: GTA V stock level: 600
+ ID 102: GTA IV stock level: 550
+ ID 103: Far Cry 6 stock level: 460
+ ID 104: Fallout 4 stock level: 600
+ ID 105: Sims 4 stock level: 430
+ ID 106: Life is Strange stock level: 600
+ ID 107: Life is Strange 2 stock level: 980
+ ID 108: Call of Duty World at War stock level: 500
+ ID 109: Age of Empires III stock level: 600
+ ID 110: Age of Empires IV stock level: 790
+ ID 111: Runescape 3 stock level: 150
+ ID 112: League of Legends stock level: 200
+
+stockLis1.remove(112);
+The product: 112-League of Legends was sucessfully removed from the list!
+
+ Miguel's GameStop Stock List
+ ====================
+
+ ID 101: GTA V stock level: 600
+ ID 102: GTA IV stock level: 550
+ ID 103: Far Cry 6 stock level: 460
+ ID 104: Fallout 4 stock level: 600
+ ID 105: Sims 4 stock level: 430
+ ID 106: Life is Strange stock level: 600
+ ID 107: Life is Strange 2 stock level: 980
+ ID 108: Call of Duty World at War stock level: 500
+ ID 109: Age of Empires III stock level: 600
+ ID 110: Age of Empires IV stock level: 790
+ ID 111: Runescape 3 stock level: 150
+
+stockLis1.checkStockUnderAmount(500);
+All the products found on low stock are the following: 
+ ID 103: Far Cry 6 stock level: 460
+ ID 105: Sims 4 stock level: 430
+ ID 108: Call of Duty World at War stock level: 500
+ ID 111: Runescape 3 stock level: 150

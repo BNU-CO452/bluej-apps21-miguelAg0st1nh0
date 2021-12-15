@@ -1,0 +1,166 @@
+StockList stockLis1 = new StockList();
+StockDemo stockDem1 = new StockDemo(stockLis1);
+stockDem1.runDemo();
+500 game copies of GTA V were bought sucessfully!
+Current Level of stock for: GTA V is: 500 copies!
+450 game copies of GTA IV were bought sucessfully!
+Current Level of stock for: GTA IV is: 450 copies!
+300 game copies of Far Cry 6 were bought sucessfully!
+Current Level of stock for: Far Cry 6 is: 300 copies!
+450 game copies of Fallout 4 were bought sucessfully!
+Current Level of stock for: Fallout 4 is: 450 copies!
+300 game copies of Sims 4 were bought sucessfully!
+Current Level of stock for: Sims 4 is: 300 copies!
+500 game copies of Life is Strange were bought sucessfully!
+Current Level of stock for: Life is Strange is: 500 copies!
+800 game copies of Life is Strange 2 were bought sucessfully!
+Current Level of stock for: Life is Strange 2 is: 800 copies!
+350 game copies of Call of Duty World at War were bought sucessfully!
+Current Level of stock for: Call of Duty World at War is: 350 copies!
+450 game copies of Age of Empires III were bought sucessfully!
+Current Level of stock for: Age of Empires III is: 450 copies!
+600 game copies of Age of Empires IV were bought sucessfully!
+Current Level of stock for: Age of Empires IV is: 600 copies!
+
+ Miguel's GameStop Stock List
+ ====================
+
+ ID 101: GTA V stock level: 500
+ ID 102: GTA IV stock level: 450
+ ID 103: Far Cry 6 stock level: 300
+ ID 104: Fallout 4 stock level: 450
+ ID 105: Sims 4 stock level: 300
+ ID 106: Life is Strange stock level: 500
+ ID 107: Life is Strange 2 stock level: 800
+ ID 108: Call of Duty World at War stock level: 350
+ ID 109: Age of Empires III stock level: 450
+ ID 110: Age of Empires IV stock level: 600
+
+120 game copies of GTA V were bought sucessfully!
+Current Level of stock for: GTA V is: 620 copies!
+100 game copies of GTA IV were bought sucessfully!
+Current Level of stock for: GTA IV is: 550 copies!
+160 game copies of Far Cry 6 were bought sucessfully!
+Current Level of stock for: Far Cry 6 is: 460 copies!
+150 game copies of Fallout 4 were bought sucessfully!
+Current Level of stock for: Fallout 4 is: 600 copies!
+130 game copies of Sims 4 were bought sucessfully!
+Current Level of stock for: Sims 4 is: 430 copies!
+100 game copies of Life is Strange were bought sucessfully!
+Current Level of stock for: Life is Strange is: 600 copies!
+180 game copies of Life is Strange 2 were bought sucessfully!
+Current Level of stock for: Life is Strange 2 is: 980 copies!
+150 game copies of Call of Duty World at War were bought sucessfully!
+Current Level of stock for: Call of Duty World at War is: 500 copies!
+150 game copies of Age of Empires III were bought sucessfully!
+Current Level of stock for: Age of Empires III is: 600 copies!
+190 game copies of Age of Empires IV were bought sucessfully!
+Current Level of stock for: Age of Empires IV is: 790 copies!
+
+ Miguel's GameStop Stock List
+ ====================
+
+ ID 101: GTA V stock level: 620
+ ID 102: GTA IV stock level: 550
+ ID 103: Far Cry 6 stock level: 460
+ ID 104: Fallout 4 stock level: 600
+ ID 105: Sims 4 stock level: 430
+ ID 106: Life is Strange stock level: 600
+ ID 107: Life is Strange 2 stock level: 980
+ ID 108: Call of Duty World at War stock level: 500
+ ID 109: Age of Empires III stock level: 600
+ ID 110: Age of Empires IV stock level: 790
+
+stockLis1.sellProduct(101, 618);
+618 game copies of GTA V were sold sucessfully!
+Current Level stock is: 2
+The Stock levels were found on a low level!
+Therefore the Auto-Restock was called in on the product: 101-GTA V
+100 copies were automatically added to your stock!
+
+ Miguel's GameStop Stock List
+ ====================
+
+ ID 101: GTA V stock level: 100
+ ID 102: GTA IV stock level: 550
+ ID 103: Far Cry 6 stock level: 460
+ ID 104: Fallout 4 stock level: 600
+ ID 105: Sims 4 stock level: 430
+ ID 106: Life is Strange stock level: 600
+ ID 107: Life is Strange 2 stock level: 980
+ ID 108: Call of Duty World at War stock level: 500
+ ID 109: Age of Empires III stock level: 600
+ ID 110: Age of Empires IV stock level: 790
+
+stockLis1.buyProduct(101, 500);
+500 game copies of GTA V were bought sucessfully!
+Current Level of stock for: GTA V is: 600 copies!
+Product product1 = new Product(111, "Runescape 3");
+stockLis1.add(product1);
+stockLis1.print();
+
+ Miguel's GameStop Stock List
+ ====================
+
+ ID 101: GTA V stock level: 600
+ ID 102: GTA IV stock level: 550
+ ID 103: Far Cry 6 stock level: 460
+ ID 104: Fallout 4 stock level: 600
+ ID 105: Sims 4 stock level: 430
+ ID 106: Life is Strange stock level: 600
+ ID 107: Life is Strange 2 stock level: 980
+ ID 108: Call of Duty World at War stock level: 500
+ ID 109: Age of Empires III stock level: 600
+ ID 110: Age of Empires IV stock level: 790
+ ID 111: Runescape 3 stock level: 0
+
+product1.increaseQuantity(100);
+product1.print();
+ ID 111: Runescape 3 stock level: 100
+product1.decreaseQuantity(50);
+product1.setQuantity(200);
+product1.print();
+ ID 111: Runescape 3 stock level: 200
+product1.decreaseQuantity(50);
+product1.print();
+ ID 111: Runescape 3 stock level: 150
+Product product2 = new Product(112, "League of Legends");
+product2.print();
+ ID 112: League of Legends stock level: 0
+product2.setQuantity(200);
+stockLis1.print();
+
+ Miguel's GameStop Stock List
+ ====================
+
+ ID 101: GTA V stock level: 600
+ ID 102: GTA IV stock level: 550
+ ID 103: Far Cry 6 stock level: 460
+ ID 104: Fallout 4 stock level: 600
+ ID 105: Sims 4 stock level: 430
+ ID 106: Life is Strange stock level: 600
+ ID 107: Life is Strange 2 stock level: 980
+ ID 108: Call of Duty World at War stock level: 500
+ ID 109: Age of Empires III stock level: 600
+ ID 110: Age of Empires IV stock level: 790
+ ID 111: Runescape 3 stock level: 150
+
+stockLis1.add(product2);
+stockLis1.print();
+
+ Miguel's GameStop Stock List
+ ====================
+
+ ID 101: GTA V stock level: 600
+ ID 102: GTA IV stock level: 550
+ ID 103: Far Cry 6 stock level: 460
+ ID 104: Fallout 4 stock level: 600
+ ID 105: Sims 4 stock level: 430
+ ID 106: Life is Strange stock level: 600
+ ID 107: Life is Strange 2 stock level: 980
+ ID 108: Call of Duty World at War stock level: 500
+ ID 109: Age of Empires III stock level: 600
+ ID 110: Age of Empires IV stock level: 790
+ ID 111: Runescape 3 stock level: 150
+ ID 112: League of Legends stock level: 200
+
