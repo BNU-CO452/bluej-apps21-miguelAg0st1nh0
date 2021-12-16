@@ -21,8 +21,6 @@ public class StockList
     {
         stock = new ArrayList<Product>();
     }
-    
-    
 
     /**
      * Add a product to the list.
@@ -45,7 +43,7 @@ public class StockList
         if(product != null)
         {
             stock.remove(product);
-            System.out.println("The product: " + product.getID() + "-" + product.getName() + " was sucessfully removed from the list!");
+            System.out.println("The product: " + product.getID() + "-" + product.getName() + " was successfully removed from the list!");
             print();
         }
         else
@@ -62,7 +60,6 @@ public class StockList
         }
     }
 
-    
     /**
      * Auto Restock if below 5 game copies
      */
@@ -111,7 +108,7 @@ public class StockList
             if(product.getQuantity() <= underAmount)
             {
                 
-                System.out.println(product.toString());
+                System.out.println(product);
             }
             
         }
@@ -131,14 +128,14 @@ public class StockList
             
             if(amount == 1)
                 {
-                    System.out.println(amount + " game copy of " + product.getName() + " was bought sucessfully!");
+                    System.out.println(amount + " game copy of " + product.getName() + " was bought successfully!");
                     System.out.println("Current Level stock is: " + product.getName() + ": " + product.getQuantity());
                     
                 }
                 //prints for plural 
                 else
                 {
-                    System.out.println(amount + " game copies of " + product.getName() + " were bought sucessfully!");
+                    System.out.println(amount + " game copies of " + product.getName() + " were bought successfully!");
                     System.out.println("Current Level of stock for: " + product.getName() + " is: " + product.getQuantity() + " copies!");
                     
                 }
@@ -169,9 +166,6 @@ public class StockList
         return null;
     }
     
-   
-    
-    
     /**
      * Sell one of the given product.
      * Show the before and after status of the product.
@@ -191,14 +185,14 @@ public class StockList
                 //prints for singular
                 if(amount == 1)
                 {
-                    System.out.println(amount + " game copy of " + product.getName() + " was sold sucessfully!");
+                    System.out.println(amount + " game copy of " + product.getName() + " was sold successfully!");
                     System.out.println("Current Level stock is: " + product.getQuantity());
                     
                 }
                 //prints for plural 
                 else
                 {
-                    System.out.println(amount + " game copies of " + product.getName() + " were sold sucessfully!");
+                    System.out.println(amount + " game copies of " + product.getName() + " were sold successfully!");
                     System.out.println("Current Level stock is: " + product.getQuantity());
                     
                 }
@@ -256,7 +250,7 @@ public class StockList
         
         if(product != null) 
         {
-            System.out.println(product.toString());
+            System.out.println(product);
         }
     }
     
@@ -281,6 +275,6 @@ public class StockList
         System.out.println();
         System.out.println(" Miguel's GameStop Stock List");
         System.out.println(" ====================");
-        System.out.println("");
+        System.out.println();
     }
 }

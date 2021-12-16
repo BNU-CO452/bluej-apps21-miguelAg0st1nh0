@@ -1,0 +1,200 @@
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > quit
+
+Process finished with exit code 0
+
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > buy
+Please enter the product ID of the product you want to buy:
+101
+Please enter the amount of copies you wish to purchase:
+10
+10 game copies of GTA V were bought successfully!
+Current Level of stock for: GTA V is: 20 copies!
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > sell
+Please enter the product ID of the product you want to sell:
+101
+Please enter the amount of copies you wish to sell:
+5
+5 game copies of GTA V were sold successfully!
+Current Level stock is: 15
+There is not enough stock of this item to currently sell 5 copies
+101, GTA V current stock level is: 15
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > search
+Enter the name you wish to search for (Case sensitive): Life
+Product  ID 106: Life is Strange stock level: 10 found!
+Product  ID 107: Life is Strange 2 stock level: 10 found!
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > low
+Please enter the amount of stock you wish to check under:
+8
+All the products found on low stock are the following: 
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > low
+Please enter the amount of stock you wish to check under:
+11
+All the products found on low stock are the following: 
+ ID 102: GTA IV stock level: 10
+ ID 103: Far Cry 6 stock level: 10
+ ID 104: Fallout 4 stock level: 10
+ ID 105: Sims 4 stock level: 10
+ ID 106: Life is Strange stock level: 10
+ ID 107: Life is Strange 2 stock level: 10
+ ID 108: Call of Duty World at War stock level: 10
+ ID 109: Age of Empires III stock level: 10
+ ID 110: Age of Empires IV stock level: 10
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > sell
+Please enter the product ID of the product you want to sell:
+101
+Please enter the amount of copies you wish to sell:
+10
+10 game copies of GTA V were sold successfully!
+Current Level stock is: 5
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > sell
+Please enter the product ID of the product you want to sell:
+101
+Please enter the amount of copies you wish to sell:
+4
+4 game copies of GTA V were sold successfully!
+Current Level stock is: 1
+The Stock levels were found on a low level!
+Therefore the Auto-Restock was called in on the product: 101-GTA V
+10 copies were automatically added to your stock!
+
+ Miguel's GameStop Stock List
+ ====================
+
+ ID 101: GTA V stock level: 10
+ ID 102: GTA IV stock level: 10
+ ID 103: Far Cry 6 stock level: 10
+ ID 104: Fallout 4 stock level: 10
+ ID 105: Sims 4 stock level: 10
+ ID 106: Life is Strange stock level: 10
+ ID 107: Life is Strange 2 stock level: 10
+ ID 108: Call of Duty World at War stock level: 10
+ ID 109: Age of Empires III stock level: 10
+ ID 110: Age of Empires IV stock level: 10
+
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > 

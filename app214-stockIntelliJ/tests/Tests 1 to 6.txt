@@ -1,0 +1,115 @@
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > print
+
+ Miguel's GameStop Stock List
+ ====================
+
+ ID 101: GTA V stock level: 10
+ ID 102: GTA IV stock level: 10
+ ID 103: Far Cry 6 stock level: 10
+ ID 104: Fallout 4 stock level: 10
+ ID 105: Sims 4 stock level: 10
+ ID 106: Life is Strange stock level: 10
+ ID 107: Life is Strange 2 stock level: 10
+ ID 108: Call of Duty World at War stock level: 10
+ ID 109: Age of Empires III stock level: 10
+ ID 110: Age of Empires IV stock level: 10
+
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > add
+Please enter the productID: 
+111
+Please enter the product name:Runescape 3
+Item successfully added to the list!
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > remove
+Please enter the id of the product you want to remove:
+111
+The product: 111-Runescape 3 was successfully removed from the list!
+
+ Miguel's GameStop Stock List
+ ====================
+
+ ID 101: GTA V stock level: 10
+ ID 102: GTA IV stock level: 10
+ ID 103: Far Cry 6 stock level: 10
+ ID 104: Fallout 4 stock level: 10
+ ID 105: Sims 4 stock level: 10
+ ID 106: Life is Strange stock level: 10
+ ID 107: Life is Strange 2 stock level: 10
+ ID 108: Call of Duty World at War stock level: 10
+ ID 109: Age of Empires III stock level: 10
+ ID 110: Age of Empires IV stock level: 10
+
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > remove
+Please enter the id of the product you want to remove:
+500
+Product not found, check ID number and try again!
+********************************
+  App21-04: Stock Application 
+      by Miguel Agostinho
+********************************
+============================================================
+    Add:                                   Add a new product
+    Remove:                            Remove an old product
+    Buy:             Buys products and adds them to the list
+    Sell:           Sells products and adds them to the list
+    Search:         Search products by name (Case Sensitive)
+    Low:             Prints all Stock under user input value
+    Print:                                Print all products
+    Quit:                                   Quit the program
+============================================================
+Please enter your choice > 
