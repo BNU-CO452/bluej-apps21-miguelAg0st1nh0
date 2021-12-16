@@ -21,14 +21,77 @@ public class StockList
     {
         stock = new ArrayList<Product>();
     }
+    
+    
 
     /**
      * Add a product to the list.
      * @param item The product item to be added.
+     * 
      */
     public void add(Product item)
     {
         stock.add(item);
+        System.out.println("Item successfully added to the list!");
+    }
+    
+    /**
+     * Remove item from the list stock
+     */
+    
+    public void remove(int productID)
+    {
+        Product product = findProduct(productID);
+        if(product != null)
+        {
+            stock.remove(product);
+            System.out.println("The product: " + product.getID() + "-" + product.getName() + " was sucessfully removed from the list!");
+            print();
+        }
+        else
+        {
+            System.out.println("Product not found, check ID number and try again!");
+        }
+    }
+    //Sets stock to 10 units or amount input to speed up testing.
+    public void setFullStock(int amount)
+    {
+        for(Product products : stock)
+        {
+            products.setQuantity(amount);
+        }
+    }
+
+    
+    /**
+     * Auto Restock if below 5 game copies
+     */
+    public void autoRestock(int autoStockDefaultValue)
+    {
+        for(Product products : stock)
+        {
+            if(products.getQuantity() <= 2)
+            {
+                
+                products.setQuantity(autoStockDefaultValue);
+                System.out.println("The Stock levels were found on a low level!");
+                System.out.println("Therefore the Auto-Restock was called in on the product: " + products.getID() + "-" + products.getName());
+                System.out.println(autoStockDefaultValue + " copies were automatically added to your stock!");
+                print();
+            }
+        }
+    }
+
+    public void searchProduct(String productName)
+    {
+        for (Product product: stock)
+        {
+            if (product.getName().contains(productName))
+            {
+                System.out.println("Product " + product + " found!");
+            }
+
+        }
     }
     
     /**
@@ -39,34 +102,53 @@ public class StockList
         buyProduct(productID, 1);
     }
     
+    public void checkStockUnderAmount(int underAmount)
+    {
+        System.out.println("All the products found on low stock are the following: ");
+        
+        for(Product product : stock)
+        {
+            if(product.getQuantity() <= underAmount)
+            {
+                
+                System.out.println(product.toString());
+            }
+            
+        }
+    }
     
     /**
      * Buy a quantity of a particular product.
      * Increase the quantity of the product by the given amount.
-     * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
      */
     public void buyProduct(int productID, int amount)
     {
         Product product = findProduct(productID);
-        
-        if(product != null) 
+        if(product != null)
         {
-            if(product.getQuantity() < 1000)
-            {
-                product.increaseQuantity(amount);
-                System.out.println("Bought " + amount + " units of " + product.getName());
-                // printout message
-            }
-            else
-            {
-                System.out.println("There is no shelf space to store the product: " + product.getName());
-            }
+            product.increaseQuantity(amount);
+            
+            if(amount == 1)
+                {
+                    System.out.println(amount + " game copy of " + product.getName() + " was bought sucessfully!");
+                    System.out.println("Current Level stock is: " + product.getName() + ": " + product.getQuantity());
+                    
+                }
+                //prints for plural 
+                else
+                {
+                    System.out.println(amount + " game copies of " + product.getName() + " were bought sucessfully!");
+                    System.out.println("Current Level of stock for: " + product.getName() + " is: " + product.getQuantity() + " copies!");
+                    
+                }
         }
         else
         {
-            // printout message
-        }  
+            System.out.println("Product not found! Check ID number and try again!");
+        }
+        
+        
     }
     
     /**
@@ -75,19 +157,25 @@ public class StockList
      */
     public Product findProduct(int productID)
     {
-        for(Product products: stock)
+        for(Product product : stock)
         {
-           if(products.getID() == productID)
-               return products;
+            if(product.getID() == productID)
+            {
+                return product;
+            }
+            
         }
+        
         return null;
     }
+    
+   
     
     
     /**
      * Sell one of the given product.
      * Show the before and after status of the product.
-     * @param id The ID of the product being sold.
+     * @paramThe ID of the product being sold.
      */
     public void sellProduct(int productID, int amount)
     {
@@ -95,20 +183,50 @@ public class StockList
         
         if(product != null) 
         {
-            if(product.getQuantity() > 0)
+            if(product.getQuantity() > 0 && product.getQuantity() >= amount)
             {
                 product.decreaseQuantity(amount);
-                System.out.println("Sold " + amount + " units of " + product.getName());
-                // printout message
+                
+                // print sell confirmation based on input amount by user.
+                //prints for singular
+                if(amount == 1)
+                {
+                    System.out.println(amount + " game copy of " + product.getName() + " was sold sucessfully!");
+                    System.out.println("Current Level stock is: " + product.getQuantity());
+                    
+                }
+                //prints for plural 
+                else
+                {
+                    System.out.println(amount + " game copies of " + product.getName() + " were sold sucessfully!");
+                    System.out.println("Current Level stock is: " + product.getQuantity());
+                    
+                }
+                
+                if(product.getQuantity() == 0)
+                {
+                    System.out.println("Your current stock for game:" + product.getName() + " is 0 copies!");
+                    System.out.println("Consider buy more to keep customers happy!");
+                }
+                
+                
+            }
+            
+            if(product.getQuantity() <= 5)
+            {
+                autoRestock(10);
             }
             else
             {
-                System.out.println("The product " + product.getName() + " out of stock!");
+                // printout message
+                System.out.println("There is not enough stock of this item to currently sell " + amount + " copies");
+                System.out.println(productID + ", " + product.getName() + " current stock level is: " + product.getQuantity());
             }
         }
         else
         {
             // printout message
+            System.out.println("Product ID not found, check ID number and try again!");
         }
     }    
 
@@ -117,18 +235,20 @@ public class StockList
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
      * match any product, return zero.
-     * @param id The ID of the product.
+     * @paramid The ID of the product.
      * @return The quantity of the given product in stock.
      */
     public int numberInStock(int productID)
     {
-        return 0;
+        Product product = findProduct(productID);
+        
+        return product.getQuantity();
     }
 
     /**
      * Print details of the given product. If found,
      * its name and stock quantity will be shown.
-     * @param id The ID of the product to look for.
+     * @paramid The ID of the product to look for.
      */
     public void printProduct(int productID)
     {
@@ -159,8 +279,8 @@ public class StockList
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" GameStop Stock List");
+        System.out.println(" Miguel's GameStop Stock List");
         System.out.println(" ====================");
-        System.out.println();
+        System.out.println("");
     }
 }
