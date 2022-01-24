@@ -18,10 +18,9 @@ import java.util.ArrayList;
  */
 public class CommandReader 
 {
-    public Location location;
     private Game game;
     private Scanner reader; // source of command input
-    public Inventory inventory;
+
     private String commandWord = null;
     private String word2 = null;
     /**
@@ -29,10 +28,8 @@ public class CommandReader
      */
     public CommandReader(Game game) 
     {
-
         this.game = game;
         reader = new Scanner(System.in);
-        inventory = new Inventory(game, word2);
     }
     
     /**
@@ -70,19 +67,55 @@ public class CommandReader
             GoCommand go = new GoCommand(game, word2);
             go.execute();
         }
+        else if(commandWord.equals(CommandWords.INVENTORY.word))
+        {
+            InventoryCommand inventory = new InventoryCommand(game);
+            inventory.execute();
+        }
         else if(commandWord.equals(CommandWords.TAKE.word))
         {
             TakeCommand take = new TakeCommand(game, word2);
             take.execute();
         }
-        else if(commandWord.equals(CommandWords.INVENTORY.word))
+        else if(commandWord.equals(CommandWords.DROP.word))
         {
-            Inventory invent = new Inventory(game, word2);
-            invent.execute();
+            DropCommand drop = new DropCommand(game, word2);
+            drop.execute();
         }
-        else if(commandWord.equals(CommandWords.ITEMS.word))
+        else if(commandWord.equals(CommandWords.HUNT.word))
         {
-
+            HuntCommand hunt = new HuntCommand(game, word2);
+            hunt.execute();
+        }
+        else if(commandWord.equals(CommandWords.USE.word))
+        {
+            UseCommand use = new UseCommand(game, word2);
+            use.execute();
+        }
+        else if(commandWord.equals(CommandWords.REST.word))
+        {
+            RestCommand rest = new RestCommand(game);
+            rest.execute();
+        }
+        else if(commandWord.equals(CommandWords.STATS.word))
+        {
+            StatsCommand stats = new StatsCommand(game);
+            stats.execute();
+        }
+        else if(commandWord.equals(CommandWords.MAP.word))
+        {
+            MapCommand map = new MapCommand(game);
+            map.execute();
+        }
+        else if(commandWord.equals(CommandWords.PRAY.word))
+        {
+            PrayCommand pray = new PrayCommand(game, word2);
+            pray.execute();
+        }
+        else if(commandWord.equals(CommandWords.MATE.word))
+        {
+            MateCommand mate = new MateCommand(game);
+            mate.execute();
         }
         else if(commandWord.equals(CommandWords.HELP.word))
         {
@@ -93,26 +126,6 @@ public class CommandReader
         {
             return true;  // game over
         }
-        else if(commandWord.equals(CommandWords.MAP.word))
-        {
-            //Prints map every time 'map' is read in scanner;
-            System.out.println("=====================-MAP-=================");
-            System.out.println("=                    =======              =");
-            System.out.println("=                    =VENUS=              =");
-            System.out.println("=      =========        |       ========  =");
-            System.out.println("=      =MERCURY=    --=SUN=--   =EARTH==  =");
-            System.out.println("=      =========        |       ========  =");
-            System.out.println("=                     =MARS=              =");
-            System.out.println("=      =========        |      ========   =");
-            System.out.println("=      =SATURN=   --=JUPITER=-- =URANUS=  =");
-            System.out.println("=      =========        |      ========   =");
-            System.out.println("=                   =NEPTUNE=             =");
-            System.out.println("=                   =========             =");
-            System.out.println("=====================-MAP-=================");
-
-
-        }
-
 
         // Return false means the game is not over
         return false;

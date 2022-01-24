@@ -16,7 +16,7 @@ public class Map
     // Need to add a list of exits
     
     private Location sun, mercury, venus, earth, mars, jupiter, saturn, uranus, neptune;
-
+    private Items items;
     private Location currentLocation;
 
     /**
@@ -60,7 +60,7 @@ public class Map
         // create the Locations
         sun = new Location("Sun, AKA the source!");
 
-
+        sun.setItem(new Items("Unfinished GodSword", "This is the only sword that proves to kill Gods! It needs to be assembled yet before taking it!"));
 
     }
 
@@ -73,6 +73,8 @@ public class Map
 
         mercury.setExit("east", sun);
         sun.setExit("west", mercury);
+        mercury.setItem(new Items("blackShard", "This is one of the shards needed to build the GodSword!"));
+
     }
     
     /**
@@ -84,6 +86,8 @@ public class Map
         
         venus.setExit("south", sun);
         sun.setExit("north", venus);
+
+        venus.setItem(new Items("greenShard", "This is one of the shards needed to build the GodSword!"));
     }
 
     /**
@@ -95,6 +99,8 @@ public class Map
         
         earth.setExit("west", sun);
         sun.setExit("east", earth);
+
+        earth.setItem(new Items("blueShard", "This is one of the shards needed to build the GodSword!"));
 
     }
 
@@ -108,6 +114,8 @@ public class Map
         mars.setExit("north", sun);
         sun.setExit("south", mars);
         mars.setExit("south", jupiter);
+
+        mars.setItem(new Items("redShard", "This is one of the shards needed to build the GodSword!"));
     }
 
     /**

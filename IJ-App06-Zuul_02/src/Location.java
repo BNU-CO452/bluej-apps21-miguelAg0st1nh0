@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -13,18 +14,18 @@ import java.util.Iterator;
  * location stores a reference to the neighboring locations.
  * 
  * @author  Michael Kölling and David J. Barnes
- * Modified by Miguel Agostinho
- * @version 07/12/2021
+ * Modified by Derek Peacock & Nicholas Day
+ * @version 2016.02.29
  */
 
 public class Location 
 {
 
-    private Items itemInRoom;
     private String description;
-    // This stores exits of this room.
+    // stores exits of this room.
     private HashMap<String, Location> exits;
-    public HashMap<String, Items> items;
+
+    ArrayList<Item> item = new ArrayList<>();
 
     /**
      * Create a location described by "description".
@@ -34,11 +35,12 @@ public class Location
      */
     public Location(String description) 
     {
-
         this.description = description;
         exits = new HashMap<>();
-        items = new HashMap<>();
+
     }
+
+
 
     /**
      * Define an exit from this room.
@@ -49,15 +51,6 @@ public class Location
     {
         exits.put(direction, neighbor);
     }
-
-    public void setItem(Items item)
-    {
-        this.itemInRoom = item;
-        items.put(item.getShortDescription(),item);
-    }
-
-
-
 
     /**
      * @return The short description of the room
@@ -71,40 +64,22 @@ public class Location
     /**
      * Return a description of the room in the form:
      *     You are in the kitchen.
-     *     Exits: north-west
+     *     Exits: north west
      * @return A long description of this room
      */
-    //TODO print here the items that exist in the planet;
     public String getLongDescription()
     {
-        return " You are at " + description + ".\n" + getExitString() + ".\n" + getItemString();
+        return " You are " + description + ".\n" + getExitString();
     }
 
-    public String getItemString()
-    {
-        String printItems = "Items: ";
-        Set<String> keys = items.keySet();
-        if(items != null)
-        {
-            for(String item : keys)
-            {
-                printItems += "" + item + ".\n";
-            }
-        }
-        else
-        {
-            System.out.println("There are no items in here!");
-
-        }
-        return printItems;
-    }
     /**
-     * Return a string listing all the exits locations,
-     * for example "Exits: north-west".
+     * Return a string listing the locations's exits,
+     * for example "Exits: north west".
      */
     private String getExitString()
     {
         String exitNames = " Exits: ";
+        String returnString = "Items in the area: ";
         Set<String> keys = exits.keySet();
         
         for(String exit : keys) 
@@ -114,8 +89,56 @@ public class Location
             else
                 exitNames += exit;
         }
-        return exitNames;
+        return exitNames + "\n" + returnString + " " + getItemsInLocation();
+
     }
+
+    // get items from room
+
+    public Item getItem(int index)
+    {
+        return item.get(index);
+    }
+
+    public Item getItem(String name)
+    {
+        for(int i = 0; i < item.size(); i++)
+        {
+            if(item.get(i).getItem().equalsIgnoreCase(name))
+            {
+                return item.get(i);
+            }
+        }
+        return null;
+    }
+
+    //set items in a room
+    public void setItem(Item newItem)
+    {
+        item.add(newItem);
+    }
+
+    public String getItemsInLocation()
+    {
+        if(!item.isEmpty() || item != null)
+        {
+            String output = "";
+
+            for(int i = 0; i < item.size(); i++)
+            {
+                output += item.get(i).getItem() + "\n";
+
+            }
+            return output;
+        }
+        else
+        {
+            System.out.println("There are no items in the room!");
+        }
+        return null;
+    }
+
+
 
     /**
      * Return the room that is reached if we go from this room in direction

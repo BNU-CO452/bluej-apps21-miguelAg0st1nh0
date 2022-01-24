@@ -5,22 +5,27 @@ public class Items
 {
     String name;
     String description;
-    int id;
-    public Items(String name, String description, int id)
+
+    public Items(String name, String description)
     {
         this.name = name;
         this.description = description;
-        this.id = id;
+
     }
 
-    private void getShortDescription()
+    public String getName()
     {
-        System.out.println(name);
+        return name;
     }
 
-    private void getLongDescription()
+    public String getItemInfo(String description)
     {
-        System.out.println(name + description + id);
+        return description;
+    }
+
+    public String getShortDescription()
+    {
+        return description;
     }
 
 

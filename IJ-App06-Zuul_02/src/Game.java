@@ -18,8 +18,9 @@
 
 public class Game 
 {
-
     public final Map MAP;
+    public Player player;
+    public Location location;
     private CommandReader reader;
     private boolean gameOver;
         
@@ -28,7 +29,7 @@ public class Game
      */
     public Game() 
     {
-
+        player = new Player();
         MAP = new Map();
         reader = new CommandReader(this);
     }
@@ -47,6 +48,18 @@ public class Game
         while (! gameOver) 
         {
             gameOver = reader.getCommand();
+
+            if(player.getPlayerHP() <= 0)
+            {
+                gameOver = true;
+                System.out.println("Good Luck next time!");
+            }
+            if(player.getTotalCubs() >= 30)
+            {
+                System.out.println("You survived the primal era and managed to ensure a fair amount of your specie!");
+                System.out.println("Congratulations, you win the game!!!");
+                gameOver = true;
+            }
         }
         
         System.out.println("Thank you for playing.  Good bye.");
@@ -59,12 +72,10 @@ public class Game
     {
         System.out.println();
         System.out.println(" Welcome to the World of Zuul!");
-        System.out.println(" World of Zuul is a game set in the solar system, incredibly fun adventure game.");
-
+        System.out.println(" World of Zuul is a survival adventure game, your main goal is to ensure your own survival and create a fair number of your own specie population to win the game.");
+        System.out.println(" Good Luck and remember to keep an eye on your stats at all times. The universe is written in random numbers, which can change when you least expect!");
         System.out.println(" Type 'help' if you need help.");
         System.out.println();
         System.out.println(MAP.getCurrentLocation().getLongDescription());
     }
-
-
 }

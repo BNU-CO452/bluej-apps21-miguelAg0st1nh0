@@ -1,3 +1,4 @@
+import java.util.HashMap;
 
 /**
  * This command allows the player to
@@ -11,7 +12,8 @@
 public class TakeCommand extends ZuulCommand
 {
     String item;
-    
+    Inventory invent;
+    Items items;
     /**
      * Take an item from a location and add it
      * to the player's inventory.
@@ -20,6 +22,7 @@ public class TakeCommand extends ZuulCommand
     {
         super(zuul);
         this.item = item;
+        invent = new Inventory(zuul, item);
     }    
 
     public void execute()
@@ -30,8 +33,35 @@ public class TakeCommand extends ZuulCommand
             System.out.println("Take what?");
             return;
         }
+        else if(item.equalsIgnoreCase("BlueShard"))
+        {
+
+            this.invent.addItemToInvent(items);
+            System.out.println(items + " taken!");
+
+        }
+
+        else if(item.equalsIgnoreCase("RedShard"))
+        {
+            this.invent.addItemToInvent(items);
+            System.out.println(items + " taken!");
+        }
+
+        else if(item.equalsIgnoreCase("greenShard"))
+        {
+            this.invent.addItemToInvent(items);
+            System.out.println(items + " taken!");
+        }
+
+        else if(item.equalsIgnoreCase("blackShard"))
+        {
+            this.invent.addItemToInvent(items);
+            System.out.println(items + " taken!");
+        }
 
         Map map = zuul.MAP;
+
+
         // remove the item from the current room
         // and add it to the player's inventory
         // Print out a suitable message.
